@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.mapper.DishMapper">
+    <resultMap id="dish-dishflavor" type="com.example.dto.DishDto">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="category_id" property="categoryId"></result>
+        <result column="price" property="price"></result>
+        <result column="code" property="code"></result>
+        <result column="image" property="image"></result>
+        <result column="description" property="description"></result>
+        <result column="status" property="status"></result>
+        <result column="sort" property="sort"></result>
+        <collection property="flavors" column="flavor">
+            <id column="id" property="id"></id>
+            <result column="dish_id" property="dishId"></result>
+            <result column="name" property="name"></result>
+            <result column="value" property="value"></result>
+        </collection>
+
+    </resultMap>
+
+    <select id="selectWithFalvors" resultType="com.example.dto.DishDto">
+        select dish.*, dish_flavor.*
+        from dish,
+             dish_flavor
+        where dish_id = dish.id
+    </select>
+</mapper>

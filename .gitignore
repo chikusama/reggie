@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+/rw_demo/
+/cache_demo/
+/redis_demo/

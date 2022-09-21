@@ -26,6 +26,7 @@ public class DishController {
     @Autowired
     DishFlavorService flavorService;
 
+
     //分页查询
     //select * from dish,category where category_id = category.id and type = ?
     @GetMapping("/page")
@@ -33,11 +34,12 @@ public class DishController {
                               @RequestParam(defaultValue = "10") Integer pageSize,
                               String name) throws IOException {
 
-        return R.success(dishService.dishPageInfo(page,pageSize,name));
+        return R.success(dishService.dishPageInfo(page, pageSize, name));
     }
 
     //删除
     @DeleteMapping
+
     public R<String> deleteDish(@RequestParam String[] ids) {
         dishService.deleteDish(ids);
         return R.success("删除成功");
@@ -50,7 +52,7 @@ public class DishController {
         UpdateWrapper<Dish> uw = new UpdateWrapper<>();
         //开启启售
         uw.in("id", Arrays.asList(ids));
-        uw.set("status",status);
+        uw.set("status", status);
         //根据id进行查询
         QueryWrapper<Dish> qw = new QueryWrapper<>();
         qw.in("id", Arrays.asList(ids));
@@ -91,15 +93,15 @@ public class DishController {
 
     //回显数据
     @GetMapping("/{id}")
-    public R<DishDto> getDish(@PathVariable Long id){
+    public R<DishDto> getDish(@PathVariable Long id) {
         //根据id进行查询
-       DishDto dishDto =  dishService.selectById(id);
+        DishDto dishDto = dishService.selectById(id);
         return R.success(dishDto);
     }
 
     //修改数据提交保存
     @PutMapping
-    public R<String> updateDish(@RequestBody DishDto dishDto){
+    public R<String> updateDish(@RequestBody DishDto dishDto) {
         //调用service层update方法,返回R<DishDto>数据
         dishService.updateDish(dishDto);
         return R.success("修改成功");
@@ -109,12 +111,13 @@ public class DishController {
 
     /**
      * 根据categoryId和Status进行套餐的查询
+     *
      * @param categoryId
      * @param status
      * @return
      */
     @GetMapping("/list")
-    public R<List<Dish>> getDishList(@RequestParam Long categoryId ,@RequestParam Integer status){
-       return R.success( dishService.searchDishList(categoryId,status));
+    public R<List<Dish>> getDishList(@RequestParam Long categoryId, @RequestParam Integer status) {
+        return R.success(dishService.searchDishList(categoryId, status));
     }
 }

@@ -16,6 +16,20 @@ spring:
   main:
     allow-circular-references: true
 
+  #Redis相关配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    database: 0 #操作的是0号数据库
+    lettuce:
+      pool:
+        max-idle: 4
+        max-wait: 1ms
+  cache:
+    redis:
+      time-to-live: 1800000M #设置缓存过期时间，可选
+
 
 mybatis-plus:
   configuration:

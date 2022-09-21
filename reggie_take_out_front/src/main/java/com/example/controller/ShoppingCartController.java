@@ -1,7 +1,6 @@
 package com.example.controller;
 
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.example.common.BaseContext;
@@ -11,8 +10,6 @@ import com.example.service.ShoppingCartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
-import java.util.Arrays;
 import java.util.List;
 
 @RequestMapping("/shoppingCart")
@@ -74,7 +71,7 @@ public class ShoppingCartController {
         //判断shoppingcart1是否为空,不为空update-1
         shoppingCart1.setNumber(shoppingCart1.getNumber() - 1);
         shoppingCartService.updateById(shoppingCart1);
-        if (shoppingCart1.getNumber()==0) {
+        if (shoppingCart1.getNumber() == 0) {
             shoppingCartService.removeById(shoppingCart1);
         }
 

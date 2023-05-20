@@ -5,6 +5,7 @@ for self-study system
 ・reggie_take_out for shop management system iclude employee management service ,dish management service and order service 
 ・reggie_take_out_front for user order system 
 
+
 front page was made by Html,Js,Css,Vue
 
 The password for the administration registration is encrypted.

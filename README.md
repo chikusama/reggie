@@ -1,6 +1,5 @@
 # reggie
 take out system
-自学自習用で作成しました
 
 ・reggie_take_outは管理側のウェブシステム 
 ・reggie_take_out_frontはユーザーアプリケーションシステム

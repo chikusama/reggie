@@ -11,8 +11,8 @@ for self-study system
 front page was made by Html,Js,Css,Vue
 
 ■New features for login
-  The password for the administration registration is encrypted.using md5DigestAsHex
-  Users register with their mobile phone number and enter a verification code. using alicom-dysms-api
+  The password for the administration registration is encrypted.Using md5DigestAsHex.
+  Users register with their mobile phone number and enter a verification code. Using alicom-dysms-api.
 
 Database　configuration：MysQL、Redis
 

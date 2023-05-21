@@ -1,4 +1,6 @@
 # reggie
+basic on front page develop the backend system
+
 take out system
 for self-study system
 
@@ -8,9 +10,9 @@ for self-study system
 
 front page was made by Html,Js,Css,Vue
 
-The password for the administration registration is encrypted.
-
-Users register with their mobile phone number and enter a verification code.
+■New features for login
+  The password for the administration registration is encrypted.using md5DigestAsHex
+  Users register with their mobile phone number and enter a verification code. using alicom-dysms-api
 
 Database　configuration：MysQL、Redis
 

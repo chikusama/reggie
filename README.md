@@ -15,9 +15,13 @@ Users register with their mobile phone number and enter a verification code.
 Database　configuration：MysQL、Redis
 
 shop management system top page
+![image](https://github.com/wmz-personal/reggie/assets/64370853/f090d42f-f37c-4043-b7ef-a610f1181427)
+
 ![image](https://github.com/wmz-personal/reggie/assets/64370853/ea9dc30e-b2ce-40b6-b593-f582c51d0409)
 
 user order system top page
+![image](https://github.com/wmz-personal/reggie/assets/64370853/e7581471-f071-4bac-809b-9dbb948cb503)
+
 ![image](https://github.com/wmz-personal/reggie/assets/64370853/a623598a-68ce-4231-b865-73fb56c11ba9)
 
 Database　configuration
